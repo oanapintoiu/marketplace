@@ -18,7 +18,7 @@ def detail(request, pk):
 
 @login_required
 def new_tebby(request):
-    if request.method == 'POST':
+    if request.method == "POST":
         form = NewItemForm(request.POST, request.FILES)
 
         if form.is_valid():
@@ -26,9 +26,9 @@ def new_tebby(request):
             item.created_by = request.user
             item.save()
 
-            return redirect('item:detail', pk=item.id)
-    
-    else: 
+            return redirect("item:detail", pk=item.id)
+
+    else:
         form = NewItemForm()
 
     return render(
