@@ -16,5 +16,4 @@ def index(request):
         },
     )
 
-
 # Create your views here.
