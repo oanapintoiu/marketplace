@@ -4,4 +4,7 @@ from . import views
 
 app_name = "item"
 
-urlpatterns = [path("<int:pk>", views.detail, name="detail")]
+urlpatterns = [
+    path("new_tebby/", views.new_tebby, name="new_tebby"),
+    path("<int:pk>", views.detail, name="detail"),
+]
