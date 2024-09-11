@@ -4,12 +4,18 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .forms import NewItemForm, EditItemForm
 from .models import Item
 
+
 def items(request):
     items = Item.objects.filter(is_sold=False)
 
-    return render(request, 'item/items.html', {
-        'items': items,
-    })
+    return render(
+        request,
+        "item/items.html",
+        {
+            "items": items,
+        },
+    )
+
 
 def detail(request, pk):
     item = get_object_or_404(Item, pk=pk)
@@ -46,6 +52,7 @@ def new_tebby(request):
         },
     )
 
+
 @login_required
 def edit(request, pk):
     item = get_object_or_404(Item, pk=pk, created_by=request.user)
@@ -70,12 +77,13 @@ def edit(request, pk):
         },
     )
 
+
 @login_required
 def delete(request, pk):
     item = get_object_or_404(Item, pk=pk, created_by=request.user)
     item.delete()
 
-    return redirect('dashboard:index') 
+    return redirect("dashboard:index")
 
 
 # Create your views here.
