@@ -7,8 +7,8 @@ from .models import Item, Category
 
 
 def items(request):
-    query = request.GET.get('query', '')
-    category_id = request.GET.get('category', 0)
+    query = request.GET.get("query", "")
+    category_id = request.GET.get("category", 0)
     items = Item.objects.filter(is_sold=False)
     categories = Category.objects.all()
 
@@ -23,9 +23,9 @@ def items(request):
         "item/items.html",
         {
             "items": items,
-            'query': query,
-            'categories': categories,
-            'category_id': int(category_id),
+            "query": query,
+            "categories": categories,
+            "category_id": int(category_id),
         },
     )
 
