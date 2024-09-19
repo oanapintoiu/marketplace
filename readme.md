@@ -37,8 +37,8 @@ This project was created using Python, Django and Tailwind to resemble a marketp
  
 ## Result
 1. Demo
-<img src="./docs/media/tebby_bear.gif" alt="Tebby Bear Demo GIF"/>
 
+<img src="./docs/media/tebby_bear.gif" alt="Tebby Bear Demo GIF"/>
 
 ## Technologies
 
@@ -72,24 +72,29 @@ I also used:
 If you already have Python and Django installed, you can skip the steps below. If you do not have them installed, follow these steps:
 
 1. Install python3 (if not already installed):
-   ```
-   brew install python
-   ```
+
+```
+brew install python
+```
 
 2. Create a virtual environment (optional):
- Create
-   ```
-  python3 -m venv venv
-   ```
+
+Create:
+
+```
+python3 -m venv venv
+```
 Activate the virtual environment:
-  ```
-  source venv/bin/activate
-   ```
+
+```
+source venv/bin/activate
+```
 
 3. Install Django: 
- ```
-  pip install django
-   ```
+
+```
+pip install django
+```
 
 ### Set up your project
 
@@ -97,23 +102,25 @@ Navigate to root/docs and follow these steps:
 
 1. Apply the database migrations:
 
-  ```
+```
   python manage.py migrate
-   ```
+```
 
 2. Create a superuser account to access the admin panel:
-  ```
-  python manage.py createsuperuser
-   ```
+
+```
+python manage.py createsuperuser
+```
 
 ### Start
 
 Navigate to root/docs and follow these steps:
 
 1. Run:
+
 ```
- python manage.py runserver
- ```
+python manage.py runserver
+```
 
 2. As user
 
