@@ -69,13 +69,25 @@ I also used:
 
 ## Usage
 
-1. Install python3. Note than Python3 is normally installed on macOS. If you need a newwer version, you can use homebrew:
+If you already have Python and Django installed, you can skip the steps below. If you do not have them installed, follow these steps:
+
+1. Install python3 (if not already installed):
    ```
    brew install python
    ```
 
-3. Install django.
+2. Create a virtual environment (optional):
+ Create
    ```
+  python3 -m venv venv
+   ```
+Activate the virtual environment:
+  ```
+  source venv/bin/activate
+   ```
+
+3. Install Django: 
+ ```
   pip install django
    ```
 
@@ -92,11 +104,6 @@ Navigate to root/docs and follow these steps:
 2. Create a superuser account to access the admin panel:
   ```
   python manage.py createsuperuser
-   ```
-
-3. Collect static files::
-  ```
-  python manage.py collectstatic
    ```
 
 ### Start
@@ -116,8 +123,6 @@ Navigate to root/docs and follow these steps:
 
 - Visit `http://127.0.0.1:8000/admin/` to log in with the superuser account.
 - Manage users, items, and conversations from the Django admin interface.
-
-**Note:** The media files have been added to .gitignore so it is recommended to add your own listings.
 
 ### Testing
 
