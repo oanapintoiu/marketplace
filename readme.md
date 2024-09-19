@@ -36,7 +36,8 @@ This project was created using Python, Django and Tailwind to resemble a marketp
 - Add cookies
  
 ## Result
-1. picture or giff
+1. Demo
+<img src="./docs/media/tebby_bear.gif" alt="Tebby Bear Demo GIF"/>
 
 
 ## Technologies
